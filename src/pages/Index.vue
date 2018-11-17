@@ -3,16 +3,16 @@
     <div class="Home">
       <div class="Home__hero mb-4 mb-md-5 mx-auto text-center">
         <h1 class="display-4">
-          {{ this.$page.landingPage.title }}
+          {{ $page.landingPage.title }}
         </h1>
         <p class="lead">
-          {{ this.$page.landingPage.intro }}
+          {{ $page.landingPage.intro }}
         </p>
       </div>
 
       <div class="Home__media-blocks mb-5">
         <AppMediaBlock
-          v-for="mediaBlock in this.$page.landingPage.mediaBlocks"
+          v-for="mediaBlock in $page.landingPage.mediaBlocks"
           :key="mediaBlock._uid"
           v-bind="mediaBlock"
         />
@@ -20,7 +20,7 @@
 
       <ul class="Home__teasers mb-5">
         <li
-          v-for="teaser in this.$page.landingPage.teasers"
+          v-for="teaser in $page.landingPage.teasers"
           :key="teaser._uid"
         >
           <AppTeaser v-bind="teaser"/>
